@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox layoutX="20" layoutY="20" prefWidth="560" spacing="10">
+            <children>
+
+                <!-- Marque du véhicule -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Marque du véhicule :" />
+                       <TextField fx:id="marqueField" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Modèle du véhicule -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Modèle du véhicule :" />
+                       <TextField fx:id="modeleField" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Année de fabrication -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Année de fabrication :" />
+                       <TextField fx:id="anneeField" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Immatriculation -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Immatriculation du véhicule :" />
+                       <TextField fx:id="immatriculationField" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Connaissance de la panne -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Connaissez-vous la panne de votre véhicule :" wrapText="true" />
+                       <VBox>
+                          <children>
+                              <RadioButton fx:id="ouiRadio" text="Oui">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="panneToggleGroup" />
+                           </toggleGroup></RadioButton>
+                              <RadioButton fx:id="nonRadio" text="Non" toggleGroup="$panneToggleGroup" />
+                          </children>
+                       </VBox>
+   </children>
+                </HBox>
+
+                <!-- Panne du véhicule -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Panne du véhicule :" />
+                       <ComboBox fx:id="panneComboBox" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Coût -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Coût :" />
+                       <TextField fx:id="coutField" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Date -->
+                <HBox spacing="10">
+   <children>
+                       <Label minWidth="180" text="Date :" />
+                       <DatePicker fx:id="datePicker" prefWidth="300" />
+   </children>
+                </HBox>
+
+                <!-- Boutons -->
+                <HBox alignment="CENTER" spacing="20" />
+
+            </children>
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+        </VBox>
+           <Button fx:id="confirmerButton" layoutX="165.0" layoutY="503.0" prefHeight="39.0" prefWidth="271.0" text="Confirmer la commande" />
+    </children>
+</AnchorPane>

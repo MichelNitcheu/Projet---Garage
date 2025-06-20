@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.garage.utils.MenuClientController">
+
+    <!-- En-tête -->
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #3498db; -fx-padding: 15px;">
+           <children>
+               <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                   <image>
+                       <Image url="@im11.jpg" />
+                   </image>
+               </ImageView>
+               <Label fx:id="welcomeLabel" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="BLURMOTOR" />
+               <Region HBox.hgrow="ALWAYS" />
+               <Button onAction="#handleLogout" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Déconnexion" />
+           </children>
+        </HBox>
+    </top>
+
+    <!-- Menu latéral -->
+    <left>
+        <VBox spacing="15" style="-fx-padding: 20px; -fx-background-color: #2980b9;">
+           <children>
+               <Button fx:id="btnReparation" onAction="#handleReparation" style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold;" text="REPARATION" />
+               <Button fx:id="btnEntretien" onAction="#handleEntretien" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold;" text="ENTRETIEN" />
+           </children>
+        </VBox>
+    </left>
+
+    <!-- Contenu principal -->
+    <center>
+        <StackPane>
+
+        </StackPane>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #ecf0f1; -fx-padding: 10px;">
+           <children>
+               <Label text="© 2025 BLURMOTOR - Tous droits réservés" />
+           </children>
+        </HBox>
+    </bottom>
+</BorderPane>

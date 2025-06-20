@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.garage.utils.MenuMecanoController">
+
+    <!-- En-tête -->
+    <top>
+        <HBox alignment="CENTER" prefHeight="13.0" prefWidth="343.0" style="-fx-background-color: #3498db; -fx-padding: 15px;">
+           <children>
+               <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+
+            </ImageView>
+               <Label fx:id="welcomeLabel" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="BLURMOTOR" />
+               <Region HBox.hgrow="ALWAYS" />
+               <Button fx:id="Deconnexion" onAction="#handleLogout" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Déconnexion" />
+           </children>
+        </HBox>
+    </top>
+
+    <!-- Menu latéral -->
+    <left>
+        <VBox prefHeight="673.0" prefWidth="301.0" spacing="15" style="-fx-padding: 20px; -fx-background-color: #2980b9;">
+           <children>
+               <Button fx:id="btnReparationmecano" layoutX="126.0" layoutY="66.0" prefHeight="55.0" prefWidth="289.0" text="SELECTIONNER REPARATION" />
+               <Button fx:id="btnterminer" layoutX="126.0" layoutY="188.0" prefHeight="55.0" prefWidth="260.0" text="REPARATION TERMINEE" />
+               <Button fx:id="btnentretienmecano" layoutX="126.0" layoutY="188.0" prefHeight="55.0" prefWidth="275.0" text="SELECTIONNER ENTRETIEN" />
+               <Button fx:id="btntentretienmecano" layoutX="126.0" layoutY="188.0" prefHeight="55.0" prefWidth="278.0" text="ENTRETIEN TERMINEE" />
+           </children>
+
+        </VBox>
+    </left>
+
+    <!-- Contenu principal -->
+    <center>
+        <StackPane fx:id="contentPane" />
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #ecf0f1; -fx-padding: 10px;">
+           <children>
+               <Label text="© 2025 Gestion d'un Garage - Tous droits réservés" />
+           </children>
+        </HBox>
+    </bottom>
+</BorderPane>

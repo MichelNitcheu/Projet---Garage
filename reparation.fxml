@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.garage.utils.ReparationController">
+
+    <top>
+        <HBox style="-fx-background-color: #3498db; -fx-padding: 10px;" alignment="CENTER">
+            <Label text="Nouvelle Réparation" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 20px;">
+            <Label text="Sélectionnez votre véhicule:"/>
+            <ComboBox fx:id="vehiculeComboBox" prefWidth="300"/>
+
+            <Label text="Description de la panne:"/>
+            <TextArea fx:id="descriptionField" prefHeight="100" prefWidth="300"/>
+
+            <Label text="Sélectionnez une panne connue (optionnel):"/>
+            <ComboBox fx:id="panneComboBox" prefWidth="300"/>
+
+            <Label text="Sélectionnez une date:"/>
+            <HBox spacing="10">
+                <DatePicker fx:id="datePicker" prefWidth="200"/>
+                <ComboBox fx:id="heureComboBox" prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="btnConfirmer" text="Confirmer" onAction="#handleConfirmer"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
